@@ -9,11 +9,20 @@ namespace ClipsApiCore.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        // GET api/values
+        /// <summary>
+        /// Returns a list of all values in the system
+        /// </summary>
+        /// <remarks>
+        /// This method doesn't really do much.
+        /// </remarks>
+        /// <returns></returns>
         [HttpGet]
-        public IEnumerable<string> Get()
+        [ProducesResponseType(typeof(object), 200)]
+        [ProducesResponseType(typeof(void), 404)]
+        public object Get()
         {
-            return new string[] { "value1", "value2" };
+            var strings = new string[] { "value1", "value2" };
+            return new JsonResult(strings);
         }
 
         // GET api/values/5

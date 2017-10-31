@@ -4,5 +4,14 @@
         <name>ClipsApiCore</name>
     </assembly>
     <members>
+        <member name="M:ClipsApiCore.Controllers.ValuesController.Get">
+            <summary>
+            Returns a list of all values in the system
+            </summary>
+            <remarks>
+            This method doesn't really do much.
+            </remarks>
+            <returns>typeof(object)</returns>
+        </member>
     </members>
 </doc>
